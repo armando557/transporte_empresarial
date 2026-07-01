@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'core/theme/app_theme.dart';
+import 'screens/home/home_screen.dart';
+
 void main() {
   runApp(const TransporteApp());
 }
@@ -12,30 +15,8 @@ class TransporteApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Transporte Empresarial',
+      theme: AppTheme.lightTheme,
       home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Transporte Empresarial'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          '¡Bienvenido!',
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
     );
   }
 }
